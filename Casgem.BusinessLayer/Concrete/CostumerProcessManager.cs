@@ -18,32 +18,36 @@ namespace Casgem.BusinessLayer.Concrete
 
         public void TDelete(CostumerProcess t)
         {
-            throw new NotImplementedException();
+            _customerProcessDAL.Delete(t);
+            _uowDal.Save();
         }
 
         public CostumerProcess TGetByID(int id)
         {
-            throw new NotImplementedException();
+            return _customerProcessDAL.GetByID(id);
         }
 
         public List<CostumerProcess> TGetList()
         {
-            throw new NotImplementedException();
+            return _customerProcessDAL.GetList();
         }
 
         public void TInsert(CostumerProcess t)
         {
-            throw new NotImplementedException();
+            _customerProcessDAL.Insert(t);
+            _uowDal.Save();
         }
 
         public void TMultiUpdate(List<CostumerProcess> t)
         {
-            throw new NotImplementedException();
+            _customerProcessDAL.MultiUpdate(t);
+            _uowDal.Save();
         }
 
         public void TUpdate(CostumerProcess t)
         {
-            throw new NotImplementedException();
+            _customerProcessDAL.Update(t);
+            _uowDal.Save();
         }
     }
 }
